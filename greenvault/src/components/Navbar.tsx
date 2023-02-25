@@ -1,5 +1,6 @@
 import React from "react";
 import gvlogo from "../images/gv-small-logo.png";
+import '../Topnav.css'
 
 const Navbar = () => {
     return (

@@ -1,55 +1,10 @@
-.navbar-c-items {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  border-bottom: rgb(233, 233, 233);
-  border-style: solid;
-  border-width: 0 0px 2px 0px;
-  padding: 10px 10px 10px 10px;
-  background-color: white;
-}
-
-.navbar-c-logo {
-  height: 40px;
-}
-
-.btn-register-login {
-  background-color: white;
-  border-color: rgb(179, 179, 179);
-  border-radius: 7.5px;
-  border-width: 1px;
-  margin-right: 20px;
-}
-
-.filters-c-items {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-  border-bottom: rgb(233, 233, 233);
-  border-style: solid;
-  border-width: 0 0px 2px 0px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  font-weight: 300;
-  background-color: white;
-}
-
-.searchbar {
-  border-radius: 10px;
-  width: 300px;
-  height: 35px;
-  background-color: #f5f2f2;
-  border: 0;
-}
-
 .bg-img-parent {
   /* position: relative; */
 }
 
 .home-pic {
   width: 100%;
-  height: auto;
+  height: 100rem;
   /* position: absolute; */
   z-index: 1;
 }
@@ -114,6 +69,10 @@ p span {
   height: 100vh;
 }
 
+.login-wrapper{
+  width: 100%;
+}
+
 .login-wrapper, .register-wrapper {
   align-items: center;
   justify-content: center;
@@ -129,18 +88,29 @@ p span {
   box-shadow: 0 0px 20px rgb(0, 0, 0);
 }
 
-.login-card, .register-card form {
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inline {
+  display: flex;
+  width: 100%;
+}
+
+.login-card form, .register-card form {
   display: flex;
   flex-direction: column;
 }
 
-.login-card, .register-card form input {
+.login-card form, .register-card form input[type=text] {
   width: 100%;
 }
 
 .log-reg-input {
   height:30px;
-  width: 245px;
+  width: 100%;
   background-color: white;
   border: 0;
   border-bottom: 1px solid grey;

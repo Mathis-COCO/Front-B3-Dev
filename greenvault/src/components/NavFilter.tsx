@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar.tsx";
 import Filters from "./Filters.tsx";
+import '../Topnav.css'
 
 const NavFilter = () => {
 

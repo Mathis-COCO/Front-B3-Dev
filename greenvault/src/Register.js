@@ -10,7 +10,7 @@ function Register() {
             <NavFilter />
             <div className="register-wrapper">
                 <div className='register-card'>
-                    <h1>inscription</h1>
+                    <h1>Inscription</h1>
                     <form>
                         <input placeholder="Nom d'utilisateur" className='log-reg-input'></input>
                         <p className='quick-tip'>
@@ -23,9 +23,10 @@ function Register() {
                             7 caractères min (6 lettre + 1 chiffre min).
                         </p>
                         <input placeholder='Valider le mot de passe' className='log-reg-input'></input>
-                        <input
-                            type={'checkbox'}
-                        />
+                        <div className='inline'>
+                            <input type={'checkbox'} className="reg-checkbox" /> 
+                            <p>Accepter nos CGU</p>                          
+                        </div>
                         <button className='log-reg-btn'>S'inscrire</button>
                         <p href="Login.js">Déjà un compte ? Se connecter</p>                            
                     </form>

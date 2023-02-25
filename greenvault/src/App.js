@@ -4,6 +4,7 @@ import homepic from './images/home-back-pic.avif'
 import ProductCard from './components/Card.tsx'
 import Login from './Login.js'
 import NavFilter from './components/NavFilter.tsx'
+import './Topnav.css'
 
 function Homepage() {
   return (
