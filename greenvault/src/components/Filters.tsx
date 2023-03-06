@@ -1,15 +1,14 @@
 import React from "react";
 import '../css/Topnav.css'
+import Groups from "../js/Groups";
 
 const Filters = () => {
 
     return (
         <div className="filters-c-items">
-        <div>vetements</div>
-        <div>informatique</div>
-        <div>véhicules</div>
-        <div>jardinerie</div>
-        <div>autres</div>
+            <div className="inline">
+                <Groups />
+            </div>
         </div>
     )
 }
