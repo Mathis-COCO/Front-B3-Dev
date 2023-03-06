@@ -1,6 +1,5 @@
 import React from "react";
 import '../css/Topnav.css'
-import Categories from "../js/Categories";
 import Groups from "../js/Groups";
 
 const Filters = () => {

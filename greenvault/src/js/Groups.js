@@ -21,7 +21,7 @@ function Groups () {
     <div>
       <ul style={{display: "inline-flex"}}>
         {groups.map((group) => (
-        <li key={group.id} style={{marginLeft: 50, marginRight: 50}}>
+        <li key={group.id} style={{marginLeft: 100, marginRight: 100}}>
            {group.name}
            <div className="dropdown-content">
               <p><Categories group_id={group.id} /></p>
