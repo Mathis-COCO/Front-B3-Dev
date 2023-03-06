@@ -3,7 +3,7 @@ import user_pfp from "../images/user-without-pic.png"
 import item_img from "../images/product_img_1.png"
 
 const ProductCard = (props: any) => {
-    const { pfp, username, item_image_src, item_price, item_size, item_brand } = props;
+    const { username, item_price, item_size, item_brand } = props;
 
     return (
         <div className="card">
