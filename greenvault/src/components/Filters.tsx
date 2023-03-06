@@ -1,12 +1,13 @@
 import React from "react";
 import '../css/Topnav.css'
+import Categories from "../js/Categories";
 import Groups from "../js/Groups";
 
 const Filters = () => {
 
     return (
         <div className="filters-c-items">
-            <div className="inline">
+            <div className="dropdown">
                 <Groups />
             </div>
         </div>

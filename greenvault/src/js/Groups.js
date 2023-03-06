@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Categories from "./Categories";
+import '../css/Topnav.css'
 
 function Groups () {
   const [groups, setGroups] = useState([]);
@@ -17,10 +19,13 @@ function Groups () {
 
   return (
     <div>
-      <ul>
+      <ul style={{display: "inline-flex"}}>
         {groups.map((group) => (
-        <li key={group.id}>
+        <li key={group.id} style={{marginLeft: 50, marginRight: 50}}>
            {group.name}
+           <div className="dropdown-content">
+              <p><Categories group_id={group.id} /></p>
+            </div>
         </li>
         ))}
     </ul>
