@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import NavFilter from '../components/NavFilter.tsx';
+import ProductCard from "../components/Card.tsx";
+import "../css/Articles.css";
 
 function Articles() {
   const [articles, setArticles] = useState([]);
@@ -14,20 +16,24 @@ function Articles() {
     fetchArticles();
   }, []);
 
+
   return (
     <div className="App">
       <NavFilter />
-      <div>
-        <ul>
-          {articles.map((article) => (
-            <li key={article.id}>
-              <h3>{article.title}</h3>
-              <p>{article.description}</p>
-              <p>{article.price} €</p>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul>
+      {articles.map((article) => (
+        <li>
+          <ProductCard 
+            username={article.user_name}
+            title={article.title}
+            item_cat={article.categorie}
+            item_desc={article.description}
+            item_price={article.price} 
+            item_brand={article.creation_date}
+          />
+        </li>
+      ))}
+      </ul>
     </div>
   );
 }

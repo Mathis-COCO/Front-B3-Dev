@@ -1,24 +1,36 @@
 import React from "react";
-import user_pfp from "../images/user-without-pic.png"
-import item_img from "../images/product_img_1.png"
+import { useState } from "react";
 
 const ProductCard = (props: any) => {
-    const { username, item_price, item_size, item_brand } = props;
+    const { username, title, item_cat, item_price, item_desc, item_brand } = props;
+    const [comment, setComment] = useState("");
+    
+    const handleCommentChange = (event) => {
+        setComment(event.target.value);
+      }
+        
+      const handleCommentSubmit = (event) => {
+        event.preventDefault();
+        console.log(comment);
+        setComment("");
+      }
 
     return (
         <div className="card">
             <div className="card-header">
-                <img src={user_pfp} alt="Profile Picture" className="user-pfp" />
                 <p>{username}</p>
-            </div>
-            <div>
-                <img src={item_img} alt="item image" className="card-product-img" />
+                <p>{title}</p>
+                <p>{item_cat}</p>
             </div>
             <div className="card-details">
+                <p>{item_desc}</p>
                 <p>{item_price}€</p>
-                <p>taille: {item_size}</p>
                 <p>{item_brand}</p>
             </div>
+            <form>
+                <input type="input" onChange={handleCommentChange}></input>
+                <button type="submit" onSubmit={handleCommentSubmit}></button>
+          </form>
         </div>
     )
 }

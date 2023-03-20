@@ -7,7 +7,7 @@ function Categories(group_id) {
 
   useEffect(() => {
     const fetchCategories = async () => {
-        const result = await fetch(`http://localhost:8080/categories/${group_id.group_id}/categories`, {
+        const result = await fetch(`http://localhost:8081/categories/${group_id.group_id}/categories`, {
             method: 'GET',
             headers: {'Content-Type': 'application/json'},
         })

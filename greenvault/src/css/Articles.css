@@ -1,0 +1,28 @@
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .articles-container li {
+    list-style: none;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    padding: 20px;
+  }
+  
+  .articles-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .articles-container p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .articles-container p:last-child {
+    font-weight: bold;
+  }
+  

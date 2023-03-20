@@ -7,7 +7,7 @@ function Groups () {
 
   useEffect(() => {
     const fetchGroups = async () => {
-        const result = await fetch("http://localhost:8080/groups", {
+        const result = await fetch("http://localhost:8081/groups", {
             method: 'GET',
             headers: {'Content-Type': 'application/json'},
         })
