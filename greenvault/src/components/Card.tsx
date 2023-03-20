@@ -9,11 +9,11 @@ const ProductCard = (props: any) => {
         setComment(event.target.value);
       }
         
-      const handleCommentSubmit = (event) => {
+    const handleCommentSubmit = (event) => {
         event.preventDefault();
         console.log(comment);
         setComment("");
-      }
+    }
 
     return (
         <div className="card">
