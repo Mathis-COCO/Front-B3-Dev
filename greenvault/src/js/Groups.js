@@ -11,6 +11,7 @@ function Groups () {
             method: 'GET',
             headers: {'Content-Type': 'application/json'},
         })
+        console.log(result, "result");
       const groupsData = await result.json();
       setGroups(groupsData);
     };

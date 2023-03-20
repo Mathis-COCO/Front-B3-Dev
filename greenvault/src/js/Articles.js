@@ -1,33 +1,33 @@
-import { useEffect, useState } from 'react';
-import "../css/Topnav.css";
+import { useState, useEffect } from "react";
+import NavFilter from '../components/NavFilter.tsx';
 
 function Articles() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     const fetchArticles = async () => {
-        const result = await fetch(`http://localhost:8080/announcements`, {
-            method: 'GET',
-            headers: {'Content-Type': 'application/json'},
-        })
-      const articlesData = await result.json();
-      console.log(articlesData, "articlesData");
-      setArticles(articlesData);
+      const response = await fetch('http://localhost:8080/announcements');
+      const data = await response.json();
+      console.log(data); 
+      setArticles(data);
     };
     fetchArticles();
   }, []);
 
   return (
     <div className="App">
+      <NavFilter />
       <div>
         <ul>
-            {articles.map((article) => (
+          {articles.map((article) => (
             <li key={article.id}>
-                {article.name}
+              <h3>{article.title}</h3>
+              <p>{article.description}</p>
+              <p>{article.price} €</p>
             </li>
-            ))}
+          ))}
         </ul>
-        </div>
+      </div>
     </div>
   );
 }
