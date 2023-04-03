@@ -10,7 +10,7 @@ function Articles() {
     const fetchArticles = async () => {
       const response = await fetch('http://localhost:8081/announcements');
       const data = await response.json();
-      console.log(data); 
+      console.log("data",data); 
       setArticles(data);
     };
     fetchArticles();

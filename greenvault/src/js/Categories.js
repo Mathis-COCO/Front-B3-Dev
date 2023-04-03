@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import "../css/Topnav.css";
 
-function Categories(group_id) {
+function Categories({group_id}) {
+  console.log('categoryyy', group_id);
   const [categories, setCategories] = useState([]);
-  console.log(group_id.group_id);
 
   useEffect(() => {
     const fetchCategories = async () => {
-        const result = await fetch(`http://localhost:8081/categories/${group_id.group_id}/categories`, {
+        const result = await fetch(`http://localhost:8081/categories/${group_id}/categories`, {
             method: 'GET',
             headers: {'Content-Type': 'application/json'},
         })
@@ -21,13 +21,13 @@ function Categories(group_id) {
   return (
     <div className="App">
       <div>
-        <ul>
+        <select className='log-reg-input'>
             {categories.map((category) => (
-            <li key={category.id}>
+            <option key={category.id} value={category.name} >
                 {category.name}
-            </li>
+            </option>
             ))}
-        </ul>
+        </select>
         </div>
     </div>
   );
