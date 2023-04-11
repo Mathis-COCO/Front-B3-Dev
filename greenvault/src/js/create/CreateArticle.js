@@ -1,11 +1,14 @@
 import { useState } from "react";
 import Groups from "../Groups";
 import '../../css/App.css';
+import {useNavigate} from 'react-router-dom';
+
 
 
 export function CreateArticles() {
+  const navigate = useNavigate();
+
   const [articles, setArticles] = useState({
-    name:'',
     title:'',
     description:'',
     price: 0,
@@ -23,7 +26,7 @@ export function CreateArticles() {
   const handleSubmit = (event) => {
     event.preventDefault();
     createArticles();
-    setArticles({name:'',
+    setArticles({
     title:'',
     description:'',
     price: 0,
@@ -49,16 +52,6 @@ export function CreateArticles() {
           <form>
             <div>
               <h3>Create Articles</h3>
-            </div>
-            <div>
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                className='log-reg-input'
-                required
-                onChange={handleChange}
-              />
             </div>
             <div>
               <input

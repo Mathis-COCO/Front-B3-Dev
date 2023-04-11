@@ -21,7 +21,7 @@ function Categories({group_id}) {
   return (
     <div className="App">
       <div>
-        <select className='log-reg-input'>
+        <select className='log-reg-input' name="categorie">
             {categories.map((category) => (
             <option key={category.id} value={category.name} >
                 {category.name}

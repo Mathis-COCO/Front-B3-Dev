@@ -49,7 +49,7 @@ export function Register () {
             <div className="register-wrapper">
                 <div className='register-card'>
                     <h1>Inscription</h1>
-                    <form onSubmit={handleSubmit}>
+                    <form>
                         <input placeholder="Nom d'utilisateur" className='log-reg-input' name="username" onChange={handleChange} required></input>
                         <p className='quick-tip'>
                             Tip: Pour créer ton nom d'utilisateur, n'utilises que des lettres et chiffres.
@@ -65,7 +65,7 @@ export function Register () {
                             <input type={'checkbox'} className="reg-checkbox" required/> 
                             <p>Accepter nos CGU</p>                          
                         </div>
-                        <input className='log-reg-btn' type="submit" value="S'inscrire"/>
+                        <button className='log-reg-btn' type="submit" value="S'inscrire" onSubmit={handleSubmit}/>
                         <div className='inline'>
                             <p>Déjà un compte ? </p>
                             <p onClick={() => navigate("/login")}>Se connecter</p>

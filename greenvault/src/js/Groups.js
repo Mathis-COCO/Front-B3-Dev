@@ -29,7 +29,7 @@ function Groups ({page = null}) {
       
       {page ? (
       <div>
-      <select className='log-reg-input'>
+      <select className='log-reg-input' name="categorie">
         {groups.map((group) => (
           <option key={group.id} style={{marginLeft: 100, marginRight: 100}} value={group.name} onClick={()=>handleSelectGroup(group.id)}>
             {group.name}
