@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import "../css/Topnav.css";
 
-function Categories({group_id}) {
+function Categories({group_id, page = null}) {
   console.log('categoryyy', group_id);
   const [categories, setCategories] = useState([]);
 
@@ -20,7 +20,20 @@ function Categories({group_id}) {
 
   return (
     <div className="App">
+      {page ? (
+        // tu peux modifier
       <div>
+        <select className='log-reg-input' name="categorie">
+            {categories.map((category) => (
+            <option key={category.id} value={category.name} >
+                {category.name} HAHAH
+            </option>
+            ))}
+        </select>
+      </div>
+      //
+      ) : (
+        <div>
         <select className='log-reg-input' name="categorie">
             {categories.map((category) => (
             <option key={category.id} value={category.name} >
@@ -28,7 +41,9 @@ function Categories({group_id}) {
             </option>
             ))}
         </select>
-        </div>
+      </div>
+      )}
+      
     </div>
   );
 }

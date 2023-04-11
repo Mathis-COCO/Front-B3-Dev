@@ -41,16 +41,18 @@ function Groups ({page = null}) {
       }
       </div>
       ) : ( 
+        //tu peux modifier
       <ul style={{display: "inline-flex"}}>
         {groups.map((group) => (
           <li key={group.id} style={{marginLeft: 100, marginRight: 100}}>
             {group.name}
             <div>
-              <p><Categories key={group.id} group_id={group.id} /></p>
+              <p><Categories key={group.id} group_id={group.id} page='noSelect'/></p>
             </div>
           </li>
           ))}
       </ul>
+      //
       )}  
     </div>
   );

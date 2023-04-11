@@ -32,7 +32,7 @@ const ProductCard = (props: any) => {
                 <form className="card-form">
                     <input type="input" onChange={handleCommentChange}></input>
                     <button type="submit" onSubmit={handleCommentSubmit}>Envoyer</button>
-            </form>
+                </form>
             </div>            
         </div>
 
