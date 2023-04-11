@@ -1,0 +1,65 @@
+.card-grid {
+    display: flex;
+    margin: 100px 150px 0 10%;
+  }
+  
+  .card {
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    width: 300px;
+    margin: 0 0 0 30px;
+    border-radius: 10px;
+  }
+  
+  .card-header {
+    display: flex;
+    font-weight: 350;
+    word-wrap: break-word;
+    width: 300px;
+  }
+  
+  .card-user-pfp {
+    padding: 10px;
+    height: 30px;
+    border-radius: 100px;
+  }
+  
+  .card-product-img {
+    height: 20rem;
+    width: 18.7rem;
+  }
+  
+  .card-details {
+    font-weight: 350;
+    line-height: 10px;
+    padding-left: 15px;
+  }
+
+  .card-form {
+    display: grid;
+  }
+
+  .card-form > button {
+    background-color: green;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    font-weight: 300;
+    text-transform: lowercase;
+    padding: 10px 30px 10px 30px;
+    letter-spacing: 2px;
+    opacity: 80%;
+    margin: 15px 0 0 0;
+  }
+
+  .card-form > button:hover {
+    background-color: rgb(3, 112, 3);
+    opacity: 1;
+  }
+
+  .card-form > input {
+    border: 0;
+    border-radius: 10px;
+    height: 100px;
+    width: 100%;
+  }

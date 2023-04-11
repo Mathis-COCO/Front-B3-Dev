@@ -1,63 +1,36 @@
 .bg-img-parent {
-  /* position: relative; */
+  background-image: url('../images/home-back-pic.png');
+  height: 60vh;
 }
 
 .home-pic {
   width: 100%;
-  height: 100rem;
+  height: 400px;
   /* position: absolute; */
   z-index: 1;
 }
 
 .home-info {
   background-color: rgb(255, 255, 255); 
-  z-index: 100; 
-  opacity: 85%;
   font-size: 20px;
   font-weight: 350;
-  border-radius: 15px;
   position: absolute;
   margin: 15% 0 0 18%;
   padding: 5px 30px 5px 30px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  color: white;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
 p span {
   display: block;
-}
-
-.card-grid {
-  display: flex;
-  margin: 100px 150px 0 150px;
-}
-
-.card {
-  background-color: rgb(245, 245, 245);
-  padding: 0;
-  width: 300px;
-  height: 450px;
-  margin: 0 0 0 30px;
-}
-
-.card-header {
-  display: flex;
-  font-weight: 350;
-}
-
-.user-pfp {
-  padding: 10px;
-  height: 30px;
-  border-radius: 100px;
-}
-
-.card-product-img {
-  height: 300px;
-  width: 300px;
-}
-
-.card-details {
-  font-weight: 350;
-  line-height: 10px;
-  padding-left: 15px;
 }
 
 .log-reg-bg {
@@ -99,6 +72,12 @@ p span {
   width: 100%;
 }
 
+.inline-sep {
+  display: flex;
+  width: 100%;
+  margin: 80px;
+}
+
 .login-card form, .register-card form {
   display: flex;
   flex-direction: column;
@@ -131,4 +110,30 @@ p span {
   font-style: italic;
   font-weight: 350;
   font-size: 13px;
+}
+
+.user-pfp {
+  height: 180px;
+  width: 180px;
+  border-radius: 100rem;
+  margin: 0 8rem 0 25rem;
+}
+
+.edit-account-btn {
+  height: 35px;
+  width: 150px;
+  color: grey;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 0 0 0 12rem;
+}
+
+.dressing-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 5px;
+  padding: 50px 0 20px 12%;
+  border-bottom: 1px solid lightgrey;
 }

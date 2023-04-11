@@ -1,6 +1,5 @@
 
 import '../css/App.css';
-import homepic from '../images/home-back-pic.png'
 import ProductCard from '../components/Card.tsx'
 import NavFilter from '../components/NavFilter.tsx'
 import "../css/Topnav.css"
@@ -12,9 +11,6 @@ function Homepage() {
       <NavFilter />
 
         <div className="bg-img-parent">
-          <div className="home-pic">
-            <img src={homepic} alt='homepagepic' />
-          </div>
           <div className="home-info">
             <p>
               <span>Prêt à sauver la planète ?</span>

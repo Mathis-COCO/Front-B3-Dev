@@ -1,5 +1,5 @@
 import React from "react";
-import gvlogo from "../images/gv-logo.png"
+import gvlogo from "../images/gv-small-logo.png"
 import '../css/Topnav.css'
 import { useNavigate } from "react-router-dom";
 import { useCookies } from 'react-cookie';
