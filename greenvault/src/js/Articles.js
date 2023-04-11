@@ -20,20 +20,18 @@ function Articles() {
   return (
     <div className="App">
       <NavFilter />
-      <ul>
+      <div className='card-grid'>
       {articles.map((article) => (
-        <li>
-          <ProductCard 
-            username={article.user_name}
-            title={article.title}
-            item_cat={article.categorie}
-            item_desc={article.description}
-            item_price={article.price} 
-            item_brand={article.creation_date}
-          />
-        </li>
+        <ProductCard 
+          username={article.user_name}
+          title={article.title}
+          item_cat={article.categorie}
+          item_desc={article.description}
+          item_price={article.price} 
+          item_brand={article.creation_date}
+        />
       ))}
-      </ul>
+      </div>
     </div>
   );
 }

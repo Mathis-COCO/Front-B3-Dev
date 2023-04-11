@@ -1,61 +1,52 @@
-
-import '../css/App.css';
-import ProductCard from '../components/Card.tsx'
-import NavFilter from '../components/NavFilter.tsx'
-import "../css/Topnav.css"
-
+import "../css/App.css";
+import { useState, useEffect } from "react";
+import ProductCard from "../components/Card.tsx";
+import NavFilter from "../components/NavFilter.tsx";
+import "../css/Topnav.css";
 
 function Homepage() {
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    const fetchArticles = async () => {
+      const response = await fetch("http://localhost:8081/announcements");
+      const data = await response.json();
+      console.log("data", data);
+      setArticles(data);
+    };
+    fetchArticles();
+  }, []);
+
+  const sortedArticles = articles.sort((a, b) => b.creation_date.localeCompare(a.creation_date)); 
+  const fourLatestArticles = sortedArticles.slice(0, 4); 
+
   return (
     <div className="App">
       <NavFilter />
 
-        <div className="bg-img-parent">
-          <div className="home-info">
-            <p>
-              <span>Prêt à sauver la planète ?</span>
-              <span>Envie de donner une seconde vie à ce que vous possédez ?</span>
+      <div className="bg-img-parent">
+        <div className="home-info">
+          <p>
+            <span>Prêt à sauver la planète ?</span>
+            <span>Envie de donner une seconde vie à ce que vous possédez ?</span>
 
-              <span>C'est ici que ça se passe</span>
-            </p>
-          </div>
+            <span>C'est ici que ça se passe</span>
+          </p>
         </div>
+      </div>
 
-        <div className='card-grid'>
-          <ProductCard 
-            pfp="../images/glama.jpg" 
-            username="Sylvie782" 
-            item_img_src="./images/glama.jpg" 
-            item_price={100}
-            item_size="M" 
-            item_brand="Evisu"
-          />
-          <ProductCard 
-            pfp="../images/glama.jpg" 
-            username="Arthur64" 
-            item_img_src="./images/glama.jpg" 
-            item_price={18.5}
-            item_size="XL" 
-            item_brand="Zara"
-          />
-          <ProductCard 
-            pfp="../images/glama.jpg" 
-            username="mamacita1234" 
-            item_img_src="./images/glama.jpg" 
-            item_price={43}
-            item_size="S" 
-            item_brand="UniQlo"
-          />
-          <ProductCard 
-            pfp="../images/glama.jpg" 
-            username="glamaRF" 
-            item_img_src="./images/glama.jpg" 
-            item_price={99999.99}
-            item_size="XXL" 
-            item_brand="GlamaBrand"
-          />
-
-        </div>
+      <div className="card-grid">
+        {fourLatestArticles.map((article) => (
+            <ProductCard
+              username={article.user_name}
+              title={article.title}
+              item_cat={article.categorie}
+              item_desc={article.description}
+              item_price={article.price}
+              item_brand={article.creation_date}
+            />
+        ))}
+      </div>
     </div>
   );
 }

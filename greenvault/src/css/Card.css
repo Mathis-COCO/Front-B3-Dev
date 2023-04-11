@@ -1,6 +1,7 @@
 .card-grid {
     display: flex;
-    margin: 100px 150px 0 10%;
+    margin: 100px 50px 0 10%;
+    margin-left: 0;
   }
   
   .card {

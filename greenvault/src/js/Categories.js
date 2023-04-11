@@ -26,7 +26,7 @@ function Categories({group_id, page = null}) {
         <select className='log-reg-input' name="categorie">
             {categories.map((category) => (
             <option key={category.id} value={category.name} >
-                {category.name} HAHAH
+                {category.name}
             </option>
             ))}
         </select>
