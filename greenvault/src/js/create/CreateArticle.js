@@ -31,7 +31,8 @@ export function CreateArticles() {
     description:'',
     price: 0,
     categorie: '',
-  });
+    });
+    navigate("/articles")
 
   };
 
@@ -94,7 +95,6 @@ export function CreateArticles() {
             </div>
             <div>
               <button
-              type="submit"
               onClick={handleSubmit}
               >Submit</button>
             </div>
