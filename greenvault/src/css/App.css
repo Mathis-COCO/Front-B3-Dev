@@ -137,3 +137,15 @@ p span {
   padding: 50px 0 20px 12%;
   border-bottom: 1px solid lightgrey;
 }
+
+.footer {
+  position: bottom;
+  width: 100vw;
+  height: 80px;
+  background-color: rgba(136, 136, 136, 0.205);
+  color: white;
+  font-size: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

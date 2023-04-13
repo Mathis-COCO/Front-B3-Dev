@@ -8,6 +8,7 @@
   font-weight: 350;
   letter-spacing: 3px;
   font-size: 12px;
+  list-style-type: none;
 }
 
 .dropdown-content {
@@ -81,7 +82,6 @@
   height: 35px;
   background-color: #f5f2f2;
   border: 0;
-  margin-left: 150px;
   padding: 0 0 0 15px;
 }
 
@@ -92,4 +92,42 @@
 .filter:hover .categories {
   display: block;
   background-color: rgb(194, 194, 194);
+}
+
+.add-product-btn button {
+  margin: 70vh 0 0 92%;
+  position: fixed;
+  background-color: #3e8e41;
+  height: 60px;
+  width: 60px;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  border-radius: 100px;
+  cursor: pointer;
+  border: white solid 1px;
+  z-index: 1;
+}
+
+.add-product-btn button:hover {
+  background-color: #067507;
+}
+
+.navbar-btns {
+  background-color: transparent;
+  border: transparent;
+  border-radius: 100px;
+  justify-content: center;
+  text-align: center;
+}
+
+.navbar-right-icons {
+  height: 20px;
+  padding: 10px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 100px;
+}
+
+.navbar-right-icons:hover {
+  color: red;
 }
