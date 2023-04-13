@@ -26,9 +26,9 @@ function Homepage() {
 
       <div className="bg-img-parent">
         <div className="home-info">
-          <p>
-            <span>Prêt à sauver la planète ?</span>
-            <span>Envie de donner une seconde vie à ce que vous possédez ?</span>
+          <p className='homepage-main-txt'>
+            <p className="inline">Prêt à <span className="green-txt">sauver</span> la planète ?</p>
+            <p>Envie de donner une seconde vie à ce que vous possédez ?</p>
 
             <span>C'est ici que ça se passe</span>
           </p>
