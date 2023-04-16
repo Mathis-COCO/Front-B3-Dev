@@ -3,6 +3,11 @@ import NavFilter from '../components/NavFilter.tsx';
 import ProductCard from "../components/Card.tsx";
 import "../css/Articles.css";
 
+function formatDate(date) {
+  const options = { day: 'numeric', month: 'numeric', year: 'numeric' };
+  return new Date(date).toLocaleDateString('fr-FR', options);
+}
+
 function Articles() {
   const [articles, setArticles] = useState([]);
 
@@ -28,7 +33,8 @@ function Articles() {
           item_cat={article.categorie}
           item_desc={article.description}
           item_price={article.price} 
-          item_brand={article.creation_date}
+          item_date={formatDate(article.creation_date)}
+          // item_image={article.image ? `http://localhost:8081/${article.image}` : null}
         />
       ))}
       </div>

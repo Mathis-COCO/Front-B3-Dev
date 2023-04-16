@@ -28,6 +28,7 @@ const ProductCard = (props: any) => {
                     <p>{item_desc}</p>
                     <p>{item_price}€</p>
                     <p>le: {item_date}</p>
+                    {/* {item_image && <img src={item_image} alt="product-image" />} */}
                 </div>
                 <form className="card-form">
                     <input type="input" onChange={handleCommentChange}></input>

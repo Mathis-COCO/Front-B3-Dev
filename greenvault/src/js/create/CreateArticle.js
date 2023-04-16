@@ -23,9 +23,19 @@ export function CreateArticles() {
     console.log("articles",articles);
   };
 
-  const handleSubmit = (event) => {
+  // const handleImageChange = (event) => {
+  //   const file = event.target.files[0];
+  //   const reader = new FileReader();
+  //   reader.onload = () => {
+  //     const dataUrl = reader.result;
+  //     setArticles({ ...articles, image: dataUrl });
+  //   };
+  //   reader.readAsDataURL(file);
+  // };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    createArticles();
+    await createArticles();
     setArticles({
     title:'',
     description:'',
@@ -84,6 +94,14 @@ export function CreateArticles() {
                 onChange={handleChange}
               />
             </div>
+            {/* <div>
+              <input
+                type="file"
+                name="image"
+                onChange={handleImageChange}
+                required
+              />
+            </div> */}
             <div>
               <label name="categorie"
                       placeholder="Categorie"
@@ -103,3 +121,4 @@ export function CreateArticles() {
     </div>
   );
 }
+
