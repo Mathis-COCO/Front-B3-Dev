@@ -107,7 +107,11 @@ p span {
   background-color: white;
   border: 0;
   border-bottom: 1px solid grey;
-  margin: 15px 0 30px 0;
+  margin: 15px 0 0px 0;
+}
+
+.log-reg-input::placeholder {
+  text-transform: lowercase;
 }
 
 .log-reg-btn {
@@ -118,9 +122,17 @@ p span {
   width: 100%;
   font-size: 15px;
   padding: 6.5px;
+  margin: 40px 0 0 0;
 }
 
 .quick-tip {
+  font-style: italic;
+  font-weight: 350;
+  font-size: 13px;
+  margin: 0 0 30px 0;
+}
+
+.pass-tip {
   font-style: italic;
   font-weight: 350;
   font-size: 13px;
@@ -150,4 +162,21 @@ p span {
   letter-spacing: 5px;
   padding: 50px 0 20px 12%;
   border-bottom: 1px solid lightgrey;
+}
+
+.view-pass-btn {
+  background-color: transparent;
+  border-color: transparent;
+  display: flex;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin: 0 0 20px 0;
+}
+
+.view-pass-txt {
+  margin: 0 10px 0 0;
+}
+
+.log-reg-sep {
+  margin: 0 10px 0 0;
 }

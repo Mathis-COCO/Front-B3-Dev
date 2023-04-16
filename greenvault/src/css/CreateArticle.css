@@ -59,7 +59,7 @@
     color: green;
 }
 
-.log-reg-input::placeholder {
+.create-input::placeholder {
     font-weight: 300;
     text-transform: uppercase;
     font-size: 12px;

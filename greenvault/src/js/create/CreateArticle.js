@@ -74,7 +74,7 @@ export function CreateArticles() {
                   type="text"
                   name="title"
                   placeholder="Titre"
-                  className='log-reg-input'
+                  className='create-input'
                   required
                   onChange={handleChange}
                 />
@@ -84,7 +84,7 @@ export function CreateArticles() {
                   type="text"
                   name="description"
                   placeholder="Description"
-                  className='log-reg-input'
+                  className='create-input'
                   required
                   onChange={handleChange}
                 />
@@ -94,7 +94,7 @@ export function CreateArticles() {
                   type="number"
                   name="price"
                   placeholder="Prix ( € )"
-                  className='log-reg-input'
+                  className='create-input'
                   required
                   onChange={handleChange}
                 />
@@ -110,7 +110,7 @@ export function CreateArticles() {
               <div>
                 <label name="categorie"
                         placeholder="Categorie"
-                        className='log-reg-input'
+                        className='create-input'
                         required 
                         onChange={handleChange}>
                   <Groups page='form'/>
