@@ -1,5 +1,5 @@
 import '../css/App.css';
-import NavFilter from '../components/NavFilter.tsx';
+import NavFilter from '../components/NavFilter.js';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 
@@ -7,6 +7,8 @@ import {useNavigate} from 'react-router-dom';
 export function Register () {
   
   const navigate = useNavigate();
+
+  const [showPassword, setShowPassword] = useState();
 
   const [data, setData] = useState({
     username: "",
@@ -56,11 +58,11 @@ export function Register () {
                             Ton pseudo est unique et ne peut pas être modifié, ne te trompes pas !
                         </p>
                         <input placeholder='E-mail' className='log-reg-input' name="email" onChange={handleChange} required></input>
-                        <input placeholder='Mot de passe' className='log-reg-input' name="password" onChange={handleChange} required></input>
+                        <input placeholder='Mot de passe' type={showPassword} className='log-reg-input' name="password" onChange={handleChange} required></input>
                         <p className='quick-tip'>
                             7 caractères min (6 lettre + 1 chiffre min).
                         </p>
-                        <input placeholder='Valider le mot de passe' className='log-reg-input' required></input>
+                        <input placeholder='Valider le mot de passe' type={showPassword} className='log-reg-input' required></input>
                         <div className='inline'>
                             <input type={'checkbox'} className="reg-checkbox" required/> 
                             <p>Accepter nos CGU</p>                          

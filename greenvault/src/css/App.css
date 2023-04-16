@@ -28,7 +28,7 @@
 }
 
 .homepage-main-txt {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 45px;
   padding: 20px 0 0 100px;
   letter-spacing: 3px;
@@ -147,16 +147,4 @@ p span {
   letter-spacing: 5px;
   padding: 50px 0 20px 12%;
   border-bottom: 1px solid lightgrey;
-}
-
-.footer {
-  position: bottom;
-  width: 100vw;
-  height: 80px;
-  background-color: rgba(136, 136, 136, 0.205);
-  color: white;
-  font-size: 20px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
 }
