@@ -13,7 +13,6 @@ const NavFilter = () => {
             <Filters></Filters>
             <div className="add-product-btn">
                 <button onClick={() => navigate("/create_article")}>
-                    <span className="add-text">ajouter</span>
                     <span className="plus-icon">+</span>
                 </button>
             </div>

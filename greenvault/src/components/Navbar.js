@@ -25,14 +25,14 @@ const Navbar = () => {
             <div className="navbar-c-items">
                 <div>
                     <img src={gvlogo} className="navbar-c-logo" onClick={() => navigate("/")} alt='logo'/>
-                    <button className='navbar-btns' onClick={() => navigate("/articles")}>Tous les Articles</button>
+                    <button className='all-products' onClick={() => navigate("/articles")}>Tous les Articles</button>
                 </div>
                 <div>
                     <input placeholder='    Rechercher...' className='searchbar'></input>
                 </div>
                 <div>
-                    {isLoggedIn ? (
-                        <div>
+                    {!isLoggedIn ? (
+                        <div className="right-icons">
                             <button className='navbar-btns' onClick={() => navigate("/profile")}>
                                 <FontAwesomeIcon className='navbar-right-icons' icon={faUser} />
                             </button>
