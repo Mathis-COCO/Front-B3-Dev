@@ -2,12 +2,11 @@ import React from "react";
 import '../css/Card.css';
 import { useNavigate } from "react-router-dom";
 
-
 const ProductCard = (props) => {
     const { username, title, item_cat, item_price, item_desc, item_date, item_image } = props;
-    const navigate = useNavigate()
-    
+ 
     const formattedDate = new Date(item_date).toLocaleDateString("fr-FR");
+    const navigate = useNavigate();
 
     return (
         <div className="card-grid">
@@ -27,11 +26,13 @@ const ProductCard = (props) => {
                     <p>{item_price}€</p>
                     <p>le: {formattedDate}</p>
                 </div>
-                <button onClick={() => navigate("/")}>Acheter pour {item_price}€</button>
-            </div>            
+                <div className="card-form">
+                <button onClick={() => navigate("/article")}>Acheter pour {item_price}€</button>
+                </div>            
+            </div>   
         </div>
 
     )
 }
 
-export default ProductCard
+export default ProductCard;
