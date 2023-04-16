@@ -25,7 +25,7 @@ const Navbar = () => {
             <div className="navbar-c-items">
                 <div>
                     <img src={gvlogo} className="navbar-c-logo" onClick={() => navigate("/")} alt='logo'/>
-                    <button className='all-products' onClick={() => navigate("/articles")}>Tous les Articles</button>
+                    <button className='grey-btn' onClick={() => navigate("/articles")}>Tous les Articles</button>
                 </div>
                 <div>
                     <input placeholder='    Rechercher...' className='searchbar'></input>
@@ -41,7 +41,7 @@ const Navbar = () => {
                             </button>
                         </div>
                     ) : (
-                        <button className='navbar-btns' onClick={() => navigate("/login")}>S'inscrire / Se connecter</button>
+                        <button className='grey-btn' onClick={() => navigate("/login")}>S'inscrire / Se connecter</button>
                     )}
                 </div>                    
             </div>
