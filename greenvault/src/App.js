@@ -6,6 +6,7 @@ import Categories from "./js/Categories";
 import Articles from "./js/Articles";
 import { CreateArticles } from "./js/create/CreateArticle";
 import Member from "./js/Member";
+import ArticleDetails from "./js/ArticleDetails";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/register" element={<Register />}/>
           <Route path="/categories" element={<Categories />}/>
           <Route path="/articles" element={<Articles />}/>
+          <Route path="/article" element={<ArticleDetails />}/>
           <Route path="/create_article" element={<CreateArticles />}/>
           <Route path="/profile" element={<Member />}/>
           <Route path="/" element={<Homepage />}/>

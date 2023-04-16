@@ -1,0 +1,149 @@
+.main-page {
+    margin: 100px 300px 0 300px;
+}
+
+.inline {
+    display: flex;
+    flex-direction: row;
+}
+
+.inline-center-space {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inline-even-sep {
+    display: flex;
+    justify-content: space-between;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-row {
+    margin: 10px 0 0 0;
+}
+
+.full-product-img {
+    height: 500px;
+    width: 500px;
+    border-radius: 30px;
+    object-fit: fill;
+}
+
+.small-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    margin: 20px 0 0 0 ;
+}
+
+.product-title {
+    margin: 0;
+    font-weight: 300;
+    color: green;
+    letter-spacing: 4px;
+}
+
+.product-path {
+    font-size: 15px;
+    color: grey;
+    margin: 0 0 30px 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.user-pfp {
+    height: 45px;
+    width: 45px;
+    margin: 0 20px 0 0; 
+}
+
+.username {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0 15px 0 0;
+}
+
+.stars-container {
+    display: flex;
+    vertical-align: text-bottom;
+}
+
+.stars {
+    margin: 0 2px 0 0 ;
+}
+
+.product-infos {
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+.product-global-info {
+    color: green;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.product-date {
+    margin: 12px 0 0 15px;
+}
+
+.seller-desc {
+    width: 600px;
+}
+
+.questions-txt {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: green;
+}
+
+.user-msg-input {
+    width: 90%;
+    height: 40px;
+    border-radius: 15px 0 0 15px;
+    border-color: transparent;
+    background-color: lightgray;
+    padding: 0 0 0 20px;
+}
+
+.user-msg-input::placeholder {
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.user-msg-input:focus {
+    outline-color: rgb(6, 119, 6);
+}
+
+.send-msg-btn {
+    background-color: green;
+    width: 10%;
+    border-radius: 0 15px 15px 0;
+    border-color: transparent transparent;
+}
+
+.send-msg-icon {
+    height: 15px;
+    width: 15px;
+}
+
+.buy-btn {
+    border-radius: 25px;
+    background-color: green;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    width: 100%;
+    height: 40px;
+    border-color: transparent transparent;
+    margin-top: 20px;
+}
