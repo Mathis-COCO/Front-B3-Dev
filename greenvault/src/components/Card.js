@@ -1,11 +1,11 @@
 import React from "react";
-import { useState } from "react";
 import '../css/Card.css';
-import { useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const ProductCard = (props) => {
     const { username, title, item_cat, item_price, item_desc, item_date, item_image } = props;
-    const navigate = useNavigation()
+    const navigate = useNavigate()
     
     const formattedDate = new Date(item_date).toLocaleDateString("fr-FR");
 
@@ -27,7 +27,7 @@ const ProductCard = (props) => {
                     <p>{item_price}€</p>
                     <p>le: {formattedDate}</p>
                 </div>
-                <button onClick={() => navigate("/article_detail")}>Acheter pour {item_price}€</button>
+                <button onClick={() => navigate("/")}>Acheter pour {item_price}€</button>
             </div>            
         </div>
 
