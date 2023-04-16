@@ -65,7 +65,7 @@ export function Register () {
                             <input type={'checkbox'} className="reg-checkbox" required/> 
                             <p>Accepter nos CGU</p>                          
                         </div>
-                        <button className='log-reg-btn' type="submit" value="S'inscrire" onSubmit={handleSubmit}/>
+                        <button className='log-reg-btn' type="submit" value="S'inscrire" onSubmit={handleSubmit}>S'inscrire</button>
                         <div className='inline'>
                             <p>Déjà un compte ? </p>
                             <p onClick={() => navigate("/login")}>Se connecter</p>

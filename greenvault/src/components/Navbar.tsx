@@ -3,6 +3,9 @@ import gvlogo from "../images/gv-small-logo.png"
 import '../css/Topnav.css'
 import { useNavigate } from "react-router-dom";
 import { useCookies } from 'react-cookie';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -18,18 +21,32 @@ const Navbar = () => {
     };
 
     return (
-        <div className="navbar-c-items">
-            <img src={gvlogo} className="navbar-c-logo" alt='logo'/>
-            <button onClick={() => navigate("/articles")}>Tous les Articles</button>
-            <button onClick={() => navigate("/create_article")}>ajouter Article</button>
-            <input placeholder='    Rechercher...' className='searchbar'></input>
-            <button onClick={() => navigate("/profile")}>Profile</button>
-            {isLoggedIn ? (
-                <button className='btn-register-login' onClick={handleLogout}>Se déconnecter</button>
-            ) : (
-                <button className='btn-register-login' onClick={() => navigate("/login")}>S'inscrire / Se connecter</button>
-            )}
+        <div>
+            <div className="navbar-c-items">
+                <div>
+                    <img src={gvlogo} className="navbar-c-logo" alt='logo'/>
+                    <button className='navbar-btns' onClick={() => navigate("/articles")}>Tous les Articles</button>
+                </div>
+                <div>
+                    <input placeholder='    Rechercher...' className='searchbar'></input>
+                </div>
+                <div>
+                    {isLoggedIn ? (
+                        <div>
+                            <button className='navbar-btns' onClick={() => navigate("/profile")}>
+                                <FontAwesomeIcon className='navbar-right-icons' icon={faUser} />
+                            </button>
+                            <button className='navbar-btns' onClick={handleLogout}>
+                                <FontAwesomeIcon className='navbar-right-icons' icon={faArrowRightFromBracket} />
+                            </button>
+                        </div>
+                    ) : (
+                        <button className='navbar-btns' onClick={() => navigate("/login")}>S'inscrire / Se connecter</button>
+                    )}
+                </div>                    
+            </div>
         </div>
+
     )
 }
 
