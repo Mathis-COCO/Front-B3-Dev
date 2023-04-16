@@ -31,7 +31,7 @@ const Navbar = () => {
                     <input placeholder='    Rechercher...' className='searchbar'></input>
                 </div>
                 <div>
-                    {!isLoggedIn ? (
+                    {isLoggedIn ? (
                         <div className="right-icons">
                             <button className='navbar-btns' onClick={() => navigate("/profile")}>
                                 <FontAwesomeIcon className='navbar-right-icons' icon={faUser} />
