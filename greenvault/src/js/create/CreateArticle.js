@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Groups from "../Groups";
-import '../../css/App.css';
+import '../../css/CreateArticle.css';
 import {useNavigate} from 'react-router-dom';
+import NavFilter from "../../components/NavFilter";
 
 
 
@@ -60,67 +61,71 @@ export function CreateArticles() {
   };
 
   return (
-    <div className='login-wrapper'>
-          <div className='login-card'>
-          <form>
-            <div>
-              <h3>Create Articles</h3>
+    <div>
+      <NavFilter></NavFilter>
+          <div className='login-wrapper'>
+            <div className='login-card'>
+            <form>
+              <div>
+                <h3 className='add-article-name'>Ajouter un article</h3>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="title"
+                  placeholder="Titre"
+                  className='log-reg-input'
+                  required
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="description"
+                  placeholder="Description"
+                  className='log-reg-input'
+                  required
+                  onChange={handleChange}
+                />
+              </div>
+              <div className='inline-euro'>
+                <input
+                  type="number"
+                  name="price"
+                  placeholder="Prix ( € )"
+                  className='log-reg-input'
+                  required
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <input
+                  type="file"
+                  name="image"
+                  onChange={handleImageChange}
+                  required
+                />
+              </div>
+              <div>
+                <label name="categorie"
+                        placeholder="Categorie"
+                        className='log-reg-input'
+                        required 
+                        onChange={handleChange}>
+                  <Groups page='form'/>
+                </label>
+              </div>
+              <div>
+                <button className='submit-btn'
+                onClick={handleSubmit}
+                >publier</button>
+              </div>
+            </form>
             </div>
-            <div>
-              <input
-                type="text"
-                name="title"
-                placeholder="Title"
-                className='log-reg-input'
-                required
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                name="description"
-                placeholder="Description"
-                className='log-reg-input'
-                required
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <input
-                type="number"
-                name="price"
-                placeholder="Price"
-                className='log-reg-input'
-                required
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <input
-                type="file"
-                name="image"
-                onChange={handleImageChange}
-                required
-              />
-            </div>
-            <div>
-              <label name="categorie"
-                      placeholder="Categorie"
-                      className='log-reg-input'
-                      required 
-                      onChange={handleChange}>
-                <Groups page='form'/>
-              </label>
-            </div>
-            <div>
-              <button
-              onClick={handleSubmit}
-              >Submit</button>
-            </div>
-          </form>
-          </div>
+      </div>      
     </div>
+    
   );
 }
 

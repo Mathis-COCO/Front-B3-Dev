@@ -55,6 +55,9 @@ p span {
 
 .login-wrapper{
   width: 100%;
+  background: url(../images/waterfall.png) ;
+  background-size: cover;
+  background-position: 0 1000px;
 }
 
 .login-wrapper, .register-wrapper {
