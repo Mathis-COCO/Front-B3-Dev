@@ -22,6 +22,8 @@ const ProductCard = (props: any) => {
                 <div className="card-header">
                     <p>{username}</p>
                     <p>{title}</p>
+                </div>
+                <div className="card-header">
                     <p>{item_cat}</p>
                 </div>
                 <div className="card-details">
