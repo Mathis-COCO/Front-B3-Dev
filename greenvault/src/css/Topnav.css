@@ -52,6 +52,7 @@
 
 .navbar-c-logo {
   height: 40px;
+  margin-left: 30px;
 }
 
 .btn-register-login {
@@ -126,6 +127,12 @@
   border-radius: 100px;
 }
 
-.navbar-right-icons:hover {
-  color: red;
-}
+.navbar-right-icons:hover { color: red; }
+
+.add-product-btn:hover .plus-icon { display: none; }
+
+.add-text { display: none; }
+
+.add-product-btn:hover .add-text { display: block; }
+
+.add-product-btn:hover button { width: 150px;}

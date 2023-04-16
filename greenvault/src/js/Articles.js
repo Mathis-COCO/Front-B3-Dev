@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import NavFilter from '../components/NavFilter.tsx';
-import ProductCard from "../components/Card.tsx";
+import NavFilter from '../components/NavFilter.js';
+import ProductCard from "../components/Card.js";
 import "../css/Articles.css";
 
 function Articles() {

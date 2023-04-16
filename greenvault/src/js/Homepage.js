@@ -1,8 +1,9 @@
 import "../css/App.css";
 import { useState, useEffect } from "react";
-import ProductCard from "../components/Card.tsx";
-import NavFilter from "../components/NavFilter.tsx";
+import ProductCard from "../components/Card.js";
+import NavFilter from "../components/NavFilter.js";
 import "../css/Topnav.css";
+import Footer from "../components/Footer.js";
 
 function Homepage() {
   const [articles, setArticles] = useState([]);
@@ -47,6 +48,7 @@ function Homepage() {
             />
         ))}
       </div>
+      <Footer></Footer>
     </div>
   );
 }
