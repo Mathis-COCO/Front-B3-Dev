@@ -1,7 +1,7 @@
 .card-grid {
     display: flex;
-    margin: 100px 50px 0 10%;
-    margin-left: 0;
+    margin: 40px 41px 0 10%;
+    margin-left: 3px;
   }
   
   .card {
@@ -27,7 +27,7 @@
   
   .card-product-img {
     height: 20rem;
-    width: 18.7rem;
+    max-width: 20%;
   }
   
   .card-details {

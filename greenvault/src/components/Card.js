@@ -1,42 +1,33 @@
 import React from "react";
 import { useState } from "react";
 import '../css/Card.css';
+import { useNavigation } from "react-router-dom";
 
 const ProductCard = (props) => {
-    const { username, title, item_cat, item_price, item_desc, item_date } = props;
-    const [comment, setComment] = useState("");
+    const { username, title, item_cat, item_price, item_desc, item_date, item_image } = props;
+    const navigate = useNavigation()
     
-    const handleCommentChange = (event) => {
-        setComment(event.target.value);
-      }
-        
-    const handleCommentSubmit = (event) => {
-        event.preventDefault();
-        console.log(comment);
-        setComment("");
-    }
+    const formattedDate = new Date(item_date).toLocaleDateString("fr-FR");
 
     return (
         <div className="card-grid">
             <div className="card">
                 <div className="card-header">
                     <p>{username}</p>
-                    <p>{title}</p>
+                    <p>{item_cat}</p>
                 </div>
                 <div className="card-header">
-                    <p>{item_cat}</p>
+                    <p>{title}</p>
+                </div>
+                <div className="card-product-img">
+                {item_image && <img src={item_image} alt="product-image" />}
                 </div>
                 <div className="card-details">
                     <p>{item_desc}</p>
                     <p>{item_price}€</p>
-                    <p>le: {item_date}</p>
-                    {/* {item_image && <img src={item_image} alt="product-image" />} */}
+                    <p>le: {formattedDate}</p>
                 </div>
-                <form className="card-form">
-                    <input type="input" onChange={handleCommentChange}></input>
-                    <button type="submit" onSubmit={handleCommentSubmit}>Envoyer</button>
-                    <button type="submit" onSubmit={handleCommentSubmit}>Acheter</button>
-                </form>
+                <button onClick={() => navigate("/article_detail")}>Acheter pour {item_price}€</button>
             </div>            
         </div>
 

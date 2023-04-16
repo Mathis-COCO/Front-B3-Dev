@@ -1,7 +1,7 @@
 import '../css/App.css';
-import NavFilter from '../components/NavFilter.tsx'
-import userpfp from '../images/glama.jpg'
-import ProductCard from '../components/Card.tsx'
+import NavFilter from '../components/NavFilter.js'
+import userpfp from '../images/product_img_1.png'
+import ProductCard from '../components/Card.js'
 
 function Member() {
   return (
@@ -13,8 +13,8 @@ function Member() {
                     <img src={userpfp} className="user-pfp" alt='Member Profile Picture'/>
                 </div>
                 <div>
-                    <h2>USERNAME</h2>
-                    <p>Compte créé le CREATION_DATE</p>
+                    <h2>Donatien</h2>
+                    <p>Compte créé le 17/04/2023</p>
                     <p>À propos :</p>
                     <div className="inline">
                         <i class="fa-light fa-location-pin"></i>
@@ -28,7 +28,6 @@ function Member() {
                 <p className='dressing-title'>Dressing</p>
                 <div className='card-grid'>
                     <ProductCard 
-                        pfp="../images/glama.jpg" 
                         username="Sylvie782" 
                         item_img_src="./images/glama.jpg" 
                         item_price={100}
@@ -36,7 +35,6 @@ function Member() {
                         item_brand="Evisu"
                     />
                     <ProductCard 
-                        pfp="../images/glama.jpg" 
                         username="Arthur64" 
                         item_img_src="./images/glama.jpg" 
                         item_price={18.5}

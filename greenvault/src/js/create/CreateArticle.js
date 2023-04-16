@@ -12,6 +12,7 @@ export function CreateArticles() {
     title:'',
     description:'',
     price: 0,
+    image: '',
     categorie:'',
   });
 
@@ -23,15 +24,15 @@ export function CreateArticles() {
     console.log("articles",articles);
   };
 
-  // const handleImageChange = (event) => {
-  //   const file = event.target.files[0];
-  //   const reader = new FileReader();
-  //   reader.onload = () => {
-  //     const dataUrl = reader.result;
-  //     setArticles({ ...articles, image: dataUrl });
-  //   };
-  //   reader.readAsDataURL(file);
-  // };
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      const dataUrl = reader.result;
+      setArticles({ ...articles, image: dataUrl });
+    };
+    reader.readAsDataURL(file);
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -40,6 +41,7 @@ export function CreateArticles() {
     title:'',
     description:'',
     price: 0,
+    image: '',
     categorie: '',
     });
     navigate("/articles")
@@ -94,14 +96,14 @@ export function CreateArticles() {
                 onChange={handleChange}
               />
             </div>
-            {/* <div>
+            <div>
               <input
                 type="file"
                 name="image"
                 onChange={handleImageChange}
                 required
               />
-            </div> */}
+            </div>
             <div>
               <label name="categorie"
                       placeholder="Categorie"

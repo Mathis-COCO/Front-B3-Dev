@@ -5,6 +5,7 @@ import Login from './js/Login';
 import Categories from "./js/Categories";
 import Articles from "./js/Articles";
 import { CreateArticles } from "./js/create/CreateArticle";
+import Member from "./js/Member";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/categories" element={<Categories />}/>
           <Route path="/articles" element={<Articles />}/>
           <Route path="/create_article" element={<CreateArticles />}/>
+          <Route path="/profile" element={<Member />}/>
           <Route path="/" element={<Homepage />}/>
         </Routes>
       </Router>
