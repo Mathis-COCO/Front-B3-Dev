@@ -5,7 +5,6 @@ import "../css/Articles.css";
 
 function Articles() {
   const [articles, setArticles] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -17,46 +16,42 @@ function Articles() {
     fetchArticles();
   }, []);
 
-  const handlePrevClick = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
 
-  const handleNextClick = () => {
-    if (currentIndex < articles.length - 4) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  const displayArticles = () => {
-    const displayedArticles = [];
-    for (let i = currentIndex; i < currentIndex + 4; i++) {
-      if (i >= articles.length) {
-        break;
-      }
-      displayedArticles.push(
-        <ProductCard 
-          username={articles[i].name}
-          title={articles[i].title}
-          item_cat={articles[i].categorie}
-          item_image={articles[i].image}
-          item_desc={articles[i].description}
-          item_price={articles[i].price} 
-          item_date={articles[i].creation_date}
-        />
-      );
-    }
-    return displayedArticles;
-  }
+  // const displayArticles = () => {
+  //   const displayedArticles = [];
+  //   for (let i = currentIndex; i < currentIndex + 4; i++) {
+  //     if (i >= articles.length) {
+  //       break;
+  //     }
+  //     displayedArticles.push(
+  //       <ProductCard 
+  //         username={articles[i].name}
+  //         title={articles[i].title}
+  //         item_cat={articles[i].categorie}
+  //         item_image={articles[i].image}
+  //         item_desc={articles[i].description}
+  //         item_price={articles[i].price} 
+  //         item_date={articles[i].creation_date}
+  //       />
+  //     );
+  //   }
+  //   return displayedArticles;
+  // }
 
   return (
     <div className="app">
       <NavFilter />
       <div className="card-grid">
-        <button onClick={handlePrevClick} disabled={currentIndex === 0}>{'<'}</button>
-        {displayArticles()}
-        <button onClick={handleNextClick} disabled={currentIndex >= articles.length - 4}>{'>'}</button>
+      {articles.map((article) => (
+        <ProductCard 
+          title={article.title}
+          item_cat={article.categorie}
+          item_image={article.image}
+          item_desc={article.description}
+          item_price={article.price} 
+          item_date={article.creation_date}
+        />
+      ))};
       </div>
     </div>
   );

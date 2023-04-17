@@ -26,6 +26,18 @@
     font-weight: bold;
   }
   
+
   .app {
     background-color: #f5f5f5;
   }
+
+  .prev-next-btn {
+    background-color: green;
+    color: white;
+    border-radius: 100px;
+    height: 40px;
+    width: 40px;
+    font-weight: 800;
+    margin-top: 18%;
+  }
+

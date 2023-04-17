@@ -11,15 +11,14 @@ const ProductCard = (props) => {
     return (
         <div className="card-grid">
             <div className="card">
-                <div className="card-header">
-                    <p>{username}</p>
+                <div className="label">
                     <p>{item_cat}</p>
                 </div>
                 <div className="card-header">
                     <p>{title}</p>
                 </div>
                 <div className="card-product-img">
-                {item_image && <img src={item_image} alt="product-image"style={{width: 300, height:320}}/>}
+                {item_image && <img src={item_image} alt="product-image"style={{width: 300, height:300}}/>}
                 </div>
                 <div className="card-details">
                     <p>{item_desc}</p>

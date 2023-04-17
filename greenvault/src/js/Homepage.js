@@ -42,6 +42,7 @@ function Homepage() {
               username={article.user_name}
               title={article.title}
               item_cat={article.categorie}
+              item_image={article.image}
               item_desc={article.description}
               item_price={article.price}
               item_brand={article.creation_date}
