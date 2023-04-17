@@ -51,7 +51,7 @@ function Articles() {
   }
 
   return (
-    <div className="App">
+    <div className="app">
       <NavFilter />
       <div className="card-grid">
         <button onClick={handlePrevClick} disabled={currentIndex === 0}>{'<'}</button>

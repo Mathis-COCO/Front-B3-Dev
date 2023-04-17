@@ -22,7 +22,7 @@ function Homepage() {
   const fourLatestArticles = sortedArticles.slice(0, 4); 
 
   return (
-    <div className="App">
+    <div className="app">
       <NavFilter />
 
       <div className="bg-img-parent">

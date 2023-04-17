@@ -19,7 +19,7 @@ const ProductCard = (props) => {
                     <p>{title}</p>
                 </div>
                 <div className="card-product-img">
-                {item_image && <img src={item_image} alt="product-image" />}
+                {item_image && <img src={item_image} alt="product-image"style={{width: 300, height:320}}/>}
                 </div>
                 <div className="card-details">
                     <p>{item_desc}</p>
