@@ -52,6 +52,7 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     border-color: transparent;
+    margin: 30px 0 0 0;
 }
 
 .submit-btn:hover {
@@ -64,4 +65,17 @@
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 3px;
+}
+
+.create-input {
+    height:30px;
+    width: 100%;
+    background-color: white;
+    border: 0;
+    border-bottom: 1px solid grey;
+    margin: 15px 0 0px 0;
+  }
+
+.file-upload-btn {
+    margin: 40px 0 0 0;
 }

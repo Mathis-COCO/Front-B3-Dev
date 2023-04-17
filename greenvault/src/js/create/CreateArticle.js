@@ -104,6 +104,7 @@ export function CreateArticles() {
                   type="file"
                   name="image"
                   onChange={handleImageChange}
+                  className='file-upload-btn'
                   required
                 />
               </div>
