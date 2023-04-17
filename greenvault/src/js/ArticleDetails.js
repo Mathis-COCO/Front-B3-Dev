@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import NavFilter from '../components/NavFilter.js';
-import ProductCard from "../components/Card.js";
 import "../css/Article.css";
 import productImg from '../images/supreme_shirt.png';
 import userPfp from '../images/user-without-pic.png';
@@ -17,7 +16,7 @@ function ArticleDetails() {
 
   useEffect(() => {
     const fetchArticles = async () => {
-      const response = await fetch('http://localhost:8081/announcements');
+      const response = await fetch(`http://localhost:8081/announcements/`);
       const data = await response.json();
       console.log("data",data); 
       setArticles(data);
