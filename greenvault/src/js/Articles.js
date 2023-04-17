@@ -54,9 +54,9 @@ function Articles() {
     <div className="App">
       <NavFilter />
       <div className="card-grid">
-        <button onClick={handlePrevClick} disabled={currentIndex === 0}>{'<'}</button>
+        <button className='prev-next-btn' onClick={handlePrevClick} disabled={currentIndex === 0}>{'<'}</button>
         {displayArticles()}
-        <button onClick={handleNextClick} disabled={currentIndex >= articles.length - 4}>{'>'}</button>
+        <button className='prev-next-btn' onClick={handleNextClick} disabled={currentIndex >= articles.length - 4}>{'>'}</button>
       </div>
     </div>
   );
