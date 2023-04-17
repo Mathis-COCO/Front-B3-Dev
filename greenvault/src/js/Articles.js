@@ -8,7 +8,7 @@ function Articles() {
 
   useEffect(() => {
     const fetchArticles = async () => {
-      const response = await fetch('http://localhost:8081/announcements');
+      const response = await fetch('http://172.16.70.217:8081/announcements');
       const data = await response.json();
       console.log("data",data); 
       setArticles(data);

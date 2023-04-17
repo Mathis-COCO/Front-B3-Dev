@@ -13,7 +13,7 @@ function Groups ({page = null}) {
 
   useEffect(() => {
     const fetchGroups = async () => {
-        const result = await fetch("http://localhost:8081/groups", {
+        const result = await fetch("http://172.16.70.217:8081/groups", {
             method: 'GET',
             headers: {'Content-Type': 'application/json'},
         })

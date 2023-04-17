@@ -50,7 +50,7 @@ export function CreateArticles() {
   };
 
   const createArticles = async () => {
-    const response = await fetch('http://localhost:8081/announcements/create', {
+    const response = await fetch('http://172.16.70.217:8081/announcements/create', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(articles),
