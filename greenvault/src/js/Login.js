@@ -1,5 +1,5 @@
 import '../css/App.css';
-import NavFilter from '../components/NavFilter.tsx';
+import NavFilter from '../components/NavFilter.js';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
@@ -28,7 +28,7 @@ function Login() {
 
   const submitUsers = async () => {
     try {
-      const result = await fetch("http://localhost:8080/users/auth/login", {
+      const result = await fetch("http://172.16.70.217:8081/users/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

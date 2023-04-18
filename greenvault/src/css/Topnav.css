@@ -1,60 +1,30 @@
-.navbar-c-items {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    border-bottom: rgb(233, 233, 233);
-    border-style: solid;
-    border-width: 0 0px 2px 0px;
-    padding: 10px 10px 10px 10px;
-    background-color: white;
-  }
-  
-  .navbar-c-logo {
-    height: 40px;
-  }
-  
-  .btn-register-login {
-    background-color: white;
-    border-color: rgb(179, 179, 179);
-    border-radius: 7.5px;
-    border-width: 1px;
-    margin-right: 20px;
-  }
-  
-  .filters-c-items {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    border-bottom: rgb(233, 233, 233);
-    border-style: solid;
-    border-width: 0 0px 2px 0px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-weight: 300;
-    background-color: white;
-  }
-  
-  .searchbar {
-    border-radius: 10px;
-    width: 500px;
-    height: 35px;
-    background-color: #f5f2f2;
-    border: 0;
-    margin-left: 150px;
-  }
+.grey-btn {
+  background-color: rgb(238, 238, 238);
+  border-radius: 100px;
+  height: 40px;
+  border-color: transparent;
+  padding: 0 20px 0 20px;
+  margin: 0 0 0 50px;
+  vertical-align: text-bottom;
+  color: rgb(56, 56, 56);
+}
 
-  .dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+.grey-btn:hover {
+  background-color: rgb(226, 226, 226);
+  color: green;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
+}
+
+.filter-name {
+  text-transform: uppercase;
+  font-weight: 350;
+  letter-spacing: 3px;
+  font-size: 12px;
+  list-style-type: none;
 }
 
 .dropdown-content {
@@ -66,11 +36,17 @@
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content p {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  margin: 0;
+  width: 350px;
+}
+
+.dropdown-content p:hover {
+  background-color: #a3dfa1;
 }
 
 .dropdown-content a:hover {background-color: #ddd;}
@@ -78,3 +54,106 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.navbar-c-items {
+  display: flex;
+  max-width: 100vw;
+  justify-content: space-between;
+  border-bottom: rgb(233, 233, 233);
+  border-style: solid;
+  border-width: 0 0px 2px 0px;
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+}
+
+.navbar-c-logo {
+  height: 40px;
+  margin-left: 30px;
+}
+
+.btn-register-login {
+  background-color: white;
+  border-color: rgb(179, 179, 179);
+  border-radius: 7.5px;
+  border-width: 1px;
+  margin-right: 20px;
+}
+
+.filters-c-items {
+  display: flex;
+  max-width: 100vw;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: rgb(233, 233, 233);
+  border-style: solid;
+  border-width: 0 0px 2px 0px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-weight: 300;
+  background-color: white;
+}
+
+.searchbar {
+  border-radius: 100px;
+  width: 500px;
+  height: 40px;
+  background-color: #f5f2f2;
+  border: 0;
+  padding: 0 0 0 15px;
+}
+
+.searchbar:focus {
+  outline-color: green;
+  padding: 0 0 0 15px;
+}
+
+.categories {
+  display: none;
+}
+
+.filter:hover .categories {
+  display: block;
+  background-color: rgb(194, 194, 194);
+}
+
+.add-product-btn button {
+  margin: 70vh 0 0 92%;
+  position: fixed;
+  background-color: #3e8e41;
+  height: 60px;
+  width: 60px;
+  color: white;
+  font-size: 45px;
+  text-align: center;
+  border-radius: 100px;
+  cursor: pointer;
+  border: white solid 1px;
+  z-index: 1;
+}
+
+.plus-icon {
+  margin: -10px 0 0 0;
+}
+
+.add-product-btn button:hover {
+  background-color: #067507;
+}
+
+.navbar-btns {
+  background-color: transparent;
+  border: transparent;
+  border-radius: 100px;
+}
+
+.navbar-right-icons {
+  height: 20px;
+  padding: 10px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 100px;
+}
+
+.navbar-right-icons:hover { color: rgb(19, 124, 37); }
+
+.right-icons {
+  margin: 0 50px 0 0;
+}

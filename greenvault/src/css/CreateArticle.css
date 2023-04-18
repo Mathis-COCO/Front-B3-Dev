@@ -1,0 +1,81 @@
+.add-article-name {
+    color: green;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.login-wrapper{
+    width: 100%;
+    background: url(../images/waterfall.png) ;
+    background-size: cover;
+    background-position: 0 1000px;
+}
+  
+.login-wrapper, .register-wrapper {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: calc(100vh - 105px);
+}
+  
+.login-card, .register-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    width: 300px;
+    padding: 20px 40px 30px 40px;
+    box-shadow: 0 0px 20px rgb(0, 0, 0);
+}
+  
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.login-card form, .register-card form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.login-card form, .register-card form input[type=text] {
+    width: 100%;
+}
+
+.submit-btn {
+    background-color: rgb(228, 228, 228);
+    height: 40px;
+    border-radius: 25px;
+    width: 100%;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-color: transparent;
+    margin: 30px 0 0 0;
+}
+
+.submit-btn:hover {
+    background-color: rgb(202, 202, 202);
+    color: green;
+}
+
+.create-input::placeholder {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.create-input {
+    height:30px;
+    width: 100%;
+    background-color: white;
+    border: 0;
+    border-bottom: 1px solid grey;
+    margin: 15px 0 0px 0;
+  }
+
+.file-upload-btn {
+    margin: 40px 0 0 0;
+}
